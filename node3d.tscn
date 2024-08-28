@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bkr43r5h8hqad"]
+
+[ext_resource type="Script" path="res://source/main.cs" id="1_teoev"]
+[ext_resource type="Texture2D" uid="uid://blesuykkuclwm" path="res://resources/red.jpg" id="2_y6wdn"]
+[ext_resource type="Texture2D" uid="uid://bcn037fax0wv7" path="res://resources/green.jpg" id="3_veyes"]
+[ext_resource type="Texture2D" uid="uid://bbk8dgxp8jic7" path="res://resources/metalplate.jpg" id="4_1um3u"]
+[ext_resource type="Texture2D" uid="uid://wq2bqperpj83" path="res://resources/blue.jpg" id="4_kuo63"]
+[ext_resource type="Texture2D" uid="uid://bf77h0y57w8hq" path="res://resources/planks.jpg" id="5_oak5p"]
+
+[node name="main" type="Node3D"]
+script = ExtResource("1_teoev")
+VoxelTextures = Array[Texture2D]([ExtResource("2_y6wdn"), ExtResource("3_veyes"), ExtResource("4_kuo63"), ExtResource("4_1um3u"), ExtResource("5_oak5p")])
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.931037, -0.173075, 0.321272, -0.0581673, 0.798738, 0.598861, -0.36026, -0.57625, 0.733587, 5.46761, 3.53733, 8.13663)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.729939, 0.65908, -0.181117, -0.470388, 0.676632, 0.566485, 0.495908, -0.328304, 0.803923, -3.14819, 0.8648, 2.71775)
+shadow_enabled = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 184.0
+offset_bottom = 52.0
