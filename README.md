@@ -7,4 +7,5 @@ first screenshot:
      
   
 # Last changes:    
-- start    
+- enum for texturenames
+  
