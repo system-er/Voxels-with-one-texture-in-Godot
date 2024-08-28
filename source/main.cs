@@ -13,6 +13,15 @@ public partial class main : Node3D
     private const int GridSize = 10;
     private byte[,,] voxels = new byte[10, 10, 10];
 
+    enum texturename
+    {
+        zero,
+        red,
+        green,
+        blue,
+        metalplate,
+        planks
+    }
 
     public override void _Ready()
     {
@@ -33,16 +42,16 @@ public partial class main : Node3D
         {
             for (int j = 0; j < 7; j++)
             {
-                voxels[i, 0, j] = 4;
+                voxels[i, 0, j] = (byte)texturename.metalplate;
             }
         }
 
 
-        voxels[1, 1, 3] = 1;
-        voxels[2, 1, 3] = 1;
-        voxels[4, 1, 3] = 2;
-        voxels[4, 2, 3] = 3;
-        voxels[3, 1, 5] = 5;
+        voxels[1, 1, 3] = (byte)texturename.red;
+        voxels[2, 1, 3] = (byte)texturename.red;
+        voxels[4, 1, 3] = (byte)texturename.green;
+        voxels[4, 2, 3] = (byte)texturename.blue;
+        voxels[3, 1, 5] = (byte)texturename.planks;
 
         for (int i = 0; i < VoxelTextures.Length; i++)
         {
